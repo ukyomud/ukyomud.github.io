@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Zabbix on 小米飞猫的博客</title>
+    <title>Zabbix on Hi~ o(*￣▽￣*)ブ</title>
     <link>https://ukyomud.github.io/tags/zabbix/</link>
-    <description>Recent content in Zabbix on 小米飞猫的博客</description>
+    <description>Recent content in Zabbix on Hi~ o(*￣▽￣*)ブ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 20 Mar 2018 02:10:50 +0800</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Zabbix 3.x 快速安装教程</title>
-      <link>https://ukyomud.github.io/post/zabbix_001/</link>
+      <link>https://ukyomud.github.io/post/zabbix/zabbix_001/</link>
       <pubDate>Tue, 20 Mar 2018 02:10:50 +0800</pubDate>
       
-      <guid>https://ukyomud.github.io/post/zabbix_001/</guid>
+      <guid>https://ukyomud.github.io/post/zabbix/zabbix_001/</guid>
       <description>&lt;p&gt;实验环境： Centos 7.0.1406&lt;/p&gt;</description>
     </item>
     

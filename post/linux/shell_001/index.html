@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>${} 的一些特意功能 (转) - Hi~ o(*￣▽￣*)ブ</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="未知" /><meta name="description" content="假设我们定义一个变量为：
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
+
+
+<link rel="canonical" href="https://ukyomud.github.io/post/linux/shell_001/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="${} 的一些特意功能 (转)" />
+<meta property="og:description" content="假设我们定义一个变量为：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ukyomud.github.io/post/linux/shell_001/" />
+<meta property="article:published_time" content="2018-03-21T23:21:08+08:00" />
+<meta property="article:modified_time" content="2018-03-21T23:21:08+08:00" />
+<meta itemprop="name" content="${} 的一些特意功能 (转)">
+<meta itemprop="description" content="假设我们定义一个变量为：">
+<meta itemprop="datePublished" content="2018-03-21T23:21:08+08:00" />
+<meta itemprop="dateModified" content="2018-03-21T23:21:08+08:00" />
+<meta itemprop="wordCount" content="1123">
+
+
+
+<meta itemprop="keywords" content="Shell," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="${} 的一些特意功能 (转)"/>
+<meta name="twitter:description" content="假设我们定义一个变量为："/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">小米博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">小米博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">${} 的一些特意功能 (转)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-21 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 1123 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>假设我们定义一个变量为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">file</span><span class="o">=</span>/dir1/dir2/dir3/my.file.txt
+
+<span class="si">${</span><span class="nv">file</span><span class="p">#*/</span><span class="si">}</span>： 从左往右截去第一个 / 左面的内容，  包含 / 符号：dir1/dir2/dir3/my.file.txt
+<span class="si">${</span><span class="nv">file</span><span class="p">##*/</span><span class="si">}</span>：从左往右截去最后一个 / 左面的内容，包含 / 符号：my.file.txt
+<span class="si">${</span><span class="nv">file</span><span class="p">#*.</span><span class="si">}</span>： 从左往右截去第一个 . 左边的内容，  包含 . 符号：file.txt
+<span class="si">${</span><span class="nv">file</span><span class="p">##*.</span><span class="si">}</span>：从左往右截去最后一个 . 左边的内容，包含 . 符号：txt
+<span class="si">${</span><span class="nv">file</span><span class="p">%/*</span><span class="si">}</span>： 从右往左截去第一个 / 右边的内容，  包含 / 符号：/dir1/dir2/dir3
+<span class="si">${</span><span class="nv">file</span><span class="p">%%/*</span><span class="si">}</span>：从右往左截去最后一个 / 右边的内容，包含 / 符号：<span class="o">(</span>空值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span>： 从右往左截去第一个 . 右边的内容，  包含 . 符号：/dir1/dir2/dir3/my.file
+<span class="si">${</span><span class="nv">file</span><span class="p">%%.*</span><span class="si">}</span>：从右往左截去最后一个 . 右s边的内容，包含 . 符号：/dir1/dir2/dir3/my
+</code></pre></td></tr></table>
+</div>
+</div><p>记忆方法：
+# 是从左往右截去标记的左面的内容，包含该标记。#是最小匹配，##是最大匹配。
+% 是从右往左截去标记的右面的内容，包含该标记。%是最小匹配，%%是最大匹配。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">${file:0:5}：从左边开始提取从第0位开始的长度为5个字符长度的内容：/dir1
+${file:5:5}：从左边开始提取从第5位开始的长度为5个字符长度的内容：/dir2
+${file: -4}: 只提取最后4位：.txt
+${file::-4}：删除最4位字符：/dir1/dir2/dir3/my.file (GNU bash, version 4.2.8上测试通过)
+${file/dir/path}：将第一个dir替换成path：/path1/dir2/dir3/my.file.txt
+${file//dir/path}：将全部dir替换成path：/path1/path2/path3/my.file.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>利用  <code>${ }</code>  還可針對不同的變數狀態賦值(沒設定、空值、非空值)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="si">${</span><span class="nv">file</span><span class="p">-my.file.txt</span><span class="si">}</span> ：  假如 <span class="nv">$file</span> 為空值，則使用  my.file.txt  作默認值。<span class="o">(</span>保留沒設定及非空值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="k">:-</span><span class="nv">my</span><span class="p">.file.txt</span><span class="si">}</span> ： 假如 <span class="nv">$file</span> 沒有設定或為空值，則使用  my.file.txt  作默認值。<span class="o">(</span>保留非空值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">+my.file.txt</span><span class="si">}</span> ：  不管 <span class="nv">$file</span> 為何值，均使用  my.file.txt  作默認值。 <span class="o">(</span>不保留任何值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">:+my.file.txt</span><span class="si">}</span>  ：除非 <span class="nv">$file</span> 為空值，否則使用  my.file.txt  作默認值。 <span class="o">(</span>保留空值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">=my.file.txt</span><span class="si">}</span> ：  假如 <span class="nv">$file</span> 沒設定，則使用  my.file.txt  作默認值，同時將 <span class="nv">$file</span> 定義為非空值。<span class="o">(</span>保留空值及非空值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">:=my.file.txt</span><span class="si">}</span>  ：假如 <span class="nv">$file</span> 沒設定或為空值，則使用  my.file.txt  作默認值，同時將  <span class="nv">$file</span> 定義為非空值。 <span class="o">(</span>保留非空值<span class="o">)</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">?my.file.txt</span><span class="si">}</span>  ： 假如 <span class="nv">$file</span> 沒設定，則將  my.file.txt  輸出至  STDERR。 <span class="o">(</span>保留空值及非空值<span class="o">))</span>
+<span class="si">${</span><span class="nv">file</span><span class="p">:?my.file.txt</span><span class="si">}</span>  ：假如 <span class="nv">$file</span> 沒設定或為空值，則將  my.file.txt  輸出至STDERR。 <span class="o">(</span>保留非空值<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>還有哦，<code>${#var}</code> 可計算出變量值的長度：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="si">${#</span><span class="nv">file</span><span class="si">}</span>  可得到  <span class="m">27</span> ，因為  /dir1/dir2/dir3/my.file.txt  剛好是  <span class="m">27</span> 個字節...
+
+<span class="nb">echo</span> <span class="s2">&#34;a b &#34;</span><span class="o">{</span>1..3<span class="o">}</span><span class="s2">&#34;|&#34;</span>
+a b 1<span class="p">|</span> a b 2<span class="p">|</span> a b 3<span class="p">|</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">未知</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-03-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/shell/">Shell</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/linux/sed_001/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Sed 两个字符之间插入符号</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/zabbix/grafana_001/">
+            <span class="next-text nav-default">Grafana 忘记密码 重置admin密码 (转)</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ukyomud@outlook.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/ukyomud" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/bdflycat" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/13776074" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://ukyomud.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>小米飞猫</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
