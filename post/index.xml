@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 小米飞猫的博客</title>
+    <link>https://ukyomud.github.io/post/</link>
+    <description>Recent content in Posts on 小米飞猫的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Jan 2021 00:18:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://ukyomud.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>立个flag</title>
+      <link>https://ukyomud.github.io/post/live_002/</link>
+      <pubDate>Sun, 24 Jan 2021 00:18:34 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/live_002/</guid>
+      <description>&lt;p&gt;看到别人都回首过去，总结以往，突然也想给自己留下点记录，也学学别人立个Flag，坚持写博客。
+说实话，看着自己以往的文章，真的好久没写博客了，忙着工作，忙着收拾屋子，忙着刷奶瓶，晃眼&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>“终于到家了&#34;</title>
+      <link>https://ukyomud.github.io/post/live_001/</link>
+      <pubDate>Sat, 23 Jan 2021 23:57:39 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/live_001/</guid>
+      <description>&lt;p&gt;终于到家了，算了一下在上海待了大半个月，弹指间一年已经过去了，公司今年年会上我还感慨，感觉去年的年会刚开完一样。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sed 两个字符之间插入符号</title>
+      <link>https://ukyomud.github.io/post/sed_001/</link>
+      <pubDate>Wed, 26 Dec 2018 11:43:31 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/sed_001/</guid>
+      <description>&lt;p&gt;题目：两个字符之间添加一个&amp;rdquo;:&amp;ldquo;符号&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>${} 的一些特意功能 (转)</title>
+      <link>https://ukyomud.github.io/post/shell_001/</link>
+      <pubDate>Wed, 21 Mar 2018 23:21:08 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/shell_001/</guid>
+      <description>&lt;p&gt;假设我们定义一个变量为：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Grafana 忘记密码 重置admin密码 (转)</title>
+      <link>https://ukyomud.github.io/post/grafana_001/</link>
+      <pubDate>Wed, 21 Mar 2018 23:15:53 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/grafana_001/</guid>
+      <description>&lt;p&gt;密码忘了，做个记录，以后省着百度了，重置成admin密码。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Zabbix 3.x 快速安装教程</title>
+      <link>https://ukyomud.github.io/post/zabbix_001/</link>
+      <pubDate>Tue, 20 Mar 2018 02:10:50 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/zabbix_001/</guid>
+      <description>&lt;p&gt;实验环境： Centos 7.0.1406&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

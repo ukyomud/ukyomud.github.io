@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sed 两个字符之间插入符号 - 小米飞猫的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="MR Mi" /><meta name="description" content="题目：两个字符之间添加一个&amp;rdquo;:&amp;ldquo;符号
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
+
+
+<link rel="canonical" href="https://ukyomud.github.io/post/sed_001/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Sed 两个字符之间插入符号" />
+<meta property="og:description" content="题目：两个字符之间添加一个&rdquo;:&ldquo;符号" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ukyomud.github.io/post/sed_001/" />
+<meta property="article:published_time" content="2018-12-26T11:43:31+08:00" />
+<meta property="article:modified_time" content="2018-12-26T11:43:31+08:00" />
+<meta itemprop="name" content="Sed 两个字符之间插入符号">
+<meta itemprop="description" content="题目：两个字符之间添加一个&rdquo;:&ldquo;符号">
+<meta itemprop="datePublished" content="2018-12-26T11:43:31+08:00" />
+<meta itemprop="dateModified" content="2018-12-26T11:43:31+08:00" />
+<meta itemprop="wordCount" content="363">
+
+
+
+<meta itemprop="keywords" content="Shell," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sed 两个字符之间插入符号"/>
+<meta name="twitter:description" content="题目：两个字符之间添加一个&rdquo;:&ldquo;符号"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">小米飞猫的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">小米飞猫的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Sed 两个字符之间插入符号</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-26 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 363 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>题目：两个字符之间添加一个&rdquo;:&ldquo;符号</p>
+<p>12523256874</p>
+<p>实现结果：12:52:32:56:87:45</p>
+<p>方法1:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;125232568745&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;:a;s/\([0-9]\{2\}\)\([0-9]\{2\}\)/\1:\2/;t a&#39;</span>
+12:52:32:56:87:45
+</code></pre></td></tr></table>
+</div>
+</div><p>[解析]
+通过设置标签 a 设置两个数字为一个域，然后2个域之间插入“:”，当格式不符合时通过 t 跳转至脚本结尾</p>
+<p>方法2:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;125232568745&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{gsub(/..\B/,&#34;&amp;:&#34;,$1)}1&#39;</span>
+12:52:32:56:87:45
+
+<span class="c1"># 非单词边界演示</span>
+<span class="nb">echo</span> <span class="s2">&#34;125232568745&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{gsub(/32\B/,&#34;&amp;:&#34;,$1)}1&#39;</span>
+125232:568745
+<span class="nb">echo</span> <span class="s2">&#34;125232568745&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{gsub(/32\B/,&#34;:&amp;&#34;,$1)}1&#39;</span>
+1252:32568745···
+<span class="sb">```</span>·······
+<span class="o">[</span>解析<span class="o">]</span>
+通过awk 的gsub进行替换,这里逻辑是先匹配两个任意字符 <span class="se">\B</span> 非单词边界,<span class="se">\b</span>是单词与符号之间的边界, <span class="se">\B</span>就是单词与单词之间的边界
+从上边两个例子，就应该可以看出来通过匹配2个字符串 然后在替换阶段 将匹配的两个字符串加<span class="s2">&#34;:&#34;</span>号
+
+方法3
+<span class="sb">```</span>bash
+<span class="nb">echo</span> <span class="s2">&#34;125232568745&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s/..\B/&amp;:/g&#39;</span>
+12:52:32:56:87:45
+</code></pre></td></tr></table>
+</div>
+</div><p>[解析]
+逻辑跟awk的类似，统一在两个字符后面增加“:”，\B就不用解释了吧</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">MR Mi</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-12-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/shell/">Shell</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/live_001/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">“终于到家了&#34;</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/shell_001/">
+            <span class="next-text nav-default">${} 的一些特意功能 (转)</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ukyomud@outlook.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/ukyomud" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/bdflycat" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/13776074" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://ukyomud.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>MR Mi</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

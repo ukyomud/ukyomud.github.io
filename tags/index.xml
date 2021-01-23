@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 小米飞猫的博客</title>
+    <link>https://ukyomud.github.io/tags/</link>
+    <description>Recent content in Tags on 小米飞猫的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Dec 2018 11:43:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://ukyomud.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shell</title>
+      <link>https://ukyomud.github.io/tags/shell/</link>
+      <pubDate>Wed, 26 Dec 2018 11:43:31 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://ukyomud.github.io/tags/grafana/</link>
+      <pubDate>Wed, 21 Mar 2018 23:15:53 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zabbix</title>
+      <link>https://ukyomud.github.io/tags/zabbix/</link>
+      <pubDate>Tue, 20 Mar 2018 02:10:50 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/tags/zabbix/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

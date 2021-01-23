@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 小米飞猫的博客</title>
+    <link>https://ukyomud.github.io/categories/linux/</link>
+    <description>Recent content in Linux on 小米飞猫的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Dec 2018 11:43:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://ukyomud.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sed 两个字符之间插入符号</title>
+      <link>https://ukyomud.github.io/post/sed_001/</link>
+      <pubDate>Wed, 26 Dec 2018 11:43:31 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/sed_001/</guid>
+      <description>&lt;p&gt;题目：两个字符之间添加一个&amp;rdquo;:&amp;ldquo;符号&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>${} 的一些特意功能 (转)</title>
+      <link>https://ukyomud.github.io/post/shell_001/</link>
+      <pubDate>Wed, 21 Mar 2018 23:21:08 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/shell_001/</guid>
+      <description>&lt;p&gt;假设我们定义一个变量为：&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

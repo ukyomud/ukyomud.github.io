@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活记录 on 小米飞猫的博客</title>
+    <link>https://ukyomud.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</link>
+    <description>Recent content in 生活记录 on 小米飞猫的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Jan 2021 00:18:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://ukyomud.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>立个flag</title>
+      <link>https://ukyomud.github.io/post/live_002/</link>
+      <pubDate>Sun, 24 Jan 2021 00:18:34 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/live_002/</guid>
+      <description>&lt;p&gt;看到别人都回首过去，总结以往，突然也想给自己留下点记录，也学学别人立个Flag，坚持写博客。
+说实话，看着自己以往的文章，真的好久没写博客了，忙着工作，忙着收拾屋子，忙着刷奶瓶，晃眼&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>“终于到家了&#34;</title>
+      <link>https://ukyomud.github.io/post/live_001/</link>
+      <pubDate>Sat, 23 Jan 2021 23:57:39 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/live_001/</guid>
+      <description>&lt;p&gt;终于到家了，算了一下在上海待了大半个月，弹指间一年已经过去了，公司今年年会上我还感慨，感觉去年的年会刚开完一样。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

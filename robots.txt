@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ukyomud.github.io/sitemap.xml
