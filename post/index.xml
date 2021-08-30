@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Hi~ o(*￣▽￣*)ブ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Jan 2021 00:18:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Aug 2021 15:43:28 +0800</lastBuildDate>
     
 	<atom:link href="https://ukyomud.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zabbix预处理系列-01：正则表达式</title>
+      <link>https://ukyomud.github.io/post/zabbix/zabbix_002/</link>
+      <pubDate>Mon, 30 Aug 2021 15:43:28 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/zabbix/zabbix_002/</guid>
+      <description>&lt;p&gt;为了让更多的人了解什么是预处理，体验Zabbix预处理在日常工作中带来的便捷，打算通过示例的方式来演示各种预处理功能的使用方法，希望能让新手快速上手，老手从中也能有所收获。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>立个flag</title>
