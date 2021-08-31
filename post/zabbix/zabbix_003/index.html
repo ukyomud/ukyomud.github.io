@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hi~ o(*￣▽￣*)ブ</title>
+  <title>解决Zabbix proxy大量DNS反向解析请求问题 - Hi~ o(*￣▽￣*)ブ</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="小米飞猫" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="小米飞猫" /><meta name="description" content="今天解决了个小问题，随便记录一下。上周客户碰到一个问题，起初客户发现DNS服务器刷了大量的dns日志，接下来抓包发现zabbix proxy发" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.74.3 with theme even" />
 
 
-<link rel="canonical" href="https://ukyomud.github.io/" />
-  <link href="https://ukyomud.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Hi~ o(*￣▽￣*)ブ" />
-  <link href="https://ukyomud.github.io/index.xml" rel="feed" type="application/rss+xml" title="Hi~ o(*￣▽￣*)ブ" />
+<link rel="canonical" href="https://ukyomud.github.io/post/zabbix/zabbix_003/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,16 +39,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hi~ o(*￣▽￣*)ブ" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ukyomud.github.io/" />
-<meta property="og:updated_time" content="2021-08-31T17:03:13+08:00" />
-<meta itemprop="name" content="Hi~ o(*￣▽￣*)ブ">
-<meta itemprop="description" content="Hugo theme even example site.">
+<meta property="og:title" content="解决Zabbix proxy大量DNS反向解析请求问题" />
+<meta property="og:description" content="今天解决了个小问题，随便记录一下。上周客户碰到一个问题，起初客户发现DNS服务器刷了大量的dns日志，接下来抓包发现zabbix proxy发" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ukyomud.github.io/post/zabbix/zabbix_003/" />
+<meta property="article:published_time" content="2021-08-31T17:03:13+08:00" />
+<meta property="article:modified_time" content="2021-08-31T17:03:13+08:00" />
+<meta itemprop="name" content="解决Zabbix proxy大量DNS反向解析请求问题">
+<meta itemprop="description" content="今天解决了个小问题，随便记录一下。上周客户碰到一个问题，起初客户发现DNS服务器刷了大量的dns日志，接下来抓包发现zabbix proxy发">
+<meta itemprop="datePublished" content="2021-08-31T17:03:13+08:00" />
+<meta itemprop="dateModified" content="2021-08-31T17:03:13+08:00" />
+<meta itemprop="wordCount" content="622">
+
+
+
+<meta itemprop="keywords" content="zabbix," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hi~ o(*￣▽￣*)ブ"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta name="twitter:title" content="解决Zabbix proxy大量DNS反向解析请求问题"/>
+<meta name="twitter:description" content="今天解决了个小问题，随便记录一下。上周客户碰到一个问题，起初客户发现DNS服务器刷了大量的dns日志，接下来抓包发现zabbix proxy发"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,87 +130,72 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/linux/shell_001/">${} 的一些特意功能 (转)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-03-21 </span>
-      <div class="post-category">
-          <a href="/categories/linux/"> Linux </a>
-          </div>
-        <span class="more-meta"> 约 1123 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>假设我们定义一个变量为：</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/linux/shell_001/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/zabbix/grafana_001/">Grafana 忘记密码 重置admin密码 (转)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-03-21 </span>
-      <div class="post-category">
-          <a href="/categories/%E7%9B%91%E6%8E%A7%E6%8A%80%E6%9C%AF/"> 监控技术 </a>
-          </div>
-        <span class="more-meta"> 约 53 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>密码忘了，做个记录，以后省着百度了，重置成admin密码。</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/zabbix/grafana_001/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/zabbix/zabbix_001/">Zabbix 3.x 快速安装教程</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-03-20 </span>
-      <div class="post-category">
-          <a href="/categories/%E7%9B%91%E6%8E%A7%E6%8A%80%E6%9C%AF/"> 监控技术 </a>
-          </div>
-        <span class="more-meta"> 约 1247 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>实验环境： Centos 7.0.1406</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/zabbix/zabbix_001/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
-      </a>
+          <article class="post">
     
-  </nav>
+    <header class="post-header">
+      <h1 class="post-title">解决Zabbix proxy大量DNS反向解析请求问题</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-08-31 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%9B%91%E6%8E%A7%E6%8A%80%E6%9C%AF/"> 监控技术 </a>
+            </div>
+          <span class="more-meta"> 约 622 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>今天解决了个小问题，随便记录一下。上周客户碰到一个问题，起初客户发现DNS服务器刷了大量的dns日志，接下来抓包发现zabbix proxy发送了大量DNS的反向解析的请求，DNS反向解析请求就是通过IP来查询域名的请求。</p>
+<p>通过实时抓包发现DNS服务器的QPS在200左右，询问客户DNS服务器可以支撑极限QPS在12万，本以为200左右的QPS应该没什么问题，但是客户反应，大量的反向解析请求导致DNS服务器产生大量的日志。希望能关闭这种大量的反向解析请求。</p>
+<p>首先查阅了官方文档，发现DNS反向解析请求主要用于zabbix的网络自动发现功能上，zabbix网络自动发现有一个选项是用域名来设置主机名，这种设置导致会通过IP地址去反向查询这个IP是否配置了域名，zabbix就会向DNS服务器发起反向解析的请求。所以我初步的解决方法是停掉zabbix网络自动发现，并且配置zabbix server 和 proxy 上的 <code>StartDiscoverers</code> 参数为<code>0</code>，配置完毕，重启服务后。客户反应这种反向解析请求对比之前减少了八分之七，可以依然还有DNS反向解析的请求从zabbi 服务器上发出来。</p>
+<p>随即我建议停掉zabbix proxy的服务器，观察域名解析是否是zabbix服务发起的，经过测试停掉proxy服务后，确实就没有了反向解析请求。</p>
+<p>咨询了官方，也没给出确切的那些功能会用到这种DNS反向解析。最终的处理方法将zabbix proxy服务器上的/etc/resolv.conf里的DNS服务器地址给注释掉。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">小米飞猫</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-08-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/zabbix/">zabbix</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/zabbix/zabbix_002/">
+            <span class="next-text nav-default">Zabbix预处理系列-01：正则表达式</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
