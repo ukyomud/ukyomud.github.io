@@ -6,7 +6,7 @@
     <description>Recent content on Hi~ o(*￣▽￣*)ブ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Aug 2021 17:03:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Sep 2021 10:29:57 +0800</lastBuildDate>
     
 	<atom:link href="https://ukyomud.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://ukyomud.github.io/about/</guid>
       <description>自我介绍 - Self Introduction Hi, 小米飞猫是我年轻时候起的网名，盛年不重来,一日难再晨。随着年龄的增长的，我已经变成了一名父亲。感叹时间过的好快，时光荏苒转眼</description>
+    </item>
+    
+    <item>
+      <title>Zabbix预处理系列-02：结构化数据 XML</title>
+      <link>https://ukyomud.github.io/post/zabbix/zabbix_004/</link>
+      <pubDate>Mon, 06 Sep 2021 10:29:57 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/zabbix/zabbix_004/</guid>
+      <description>&lt;p&gt;本章节主要通过示例来讲解：XML XPath&lt;/p&gt;</description>
     </item>
     
     <item>

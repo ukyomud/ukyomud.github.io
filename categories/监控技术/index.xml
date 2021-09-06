@@ -6,10 +6,19 @@
     <description>Recent content in 监控技术 on Hi~ o(*￣▽￣*)ブ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Aug 2021 17:03:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Sep 2021 10:29:57 +0800</lastBuildDate>
     
 	<atom:link href="https://ukyomud.github.io/categories/%E7%9B%91%E6%8E%A7%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zabbix预处理系列-02：结构化数据 XML</title>
+      <link>https://ukyomud.github.io/post/zabbix/zabbix_004/</link>
+      <pubDate>Mon, 06 Sep 2021 10:29:57 +0800</pubDate>
+      
+      <guid>https://ukyomud.github.io/post/zabbix/zabbix_004/</guid>
+      <description>&lt;p&gt;本章节主要通过示例来讲解：XML XPath&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>解决Zabbix proxy大量DNS反向解析请求问题</title>

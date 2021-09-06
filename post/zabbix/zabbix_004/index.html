@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Zabbix预处理系列-02：结构化数据 XML - Hi~ o(*￣▽￣*)ブ</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="小米飞猫" /><meta name="description" content="本章节主要通过示例来讲解：XML XPath
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
+
+
+<link rel="canonical" href="https://ukyomud.github.io/post/zabbix/zabbix_004/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Zabbix预处理系列-02：结构化数据 XML" />
+<meta property="og:description" content="本章节主要通过示例来讲解：XML XPath" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ukyomud.github.io/post/zabbix/zabbix_004/" />
+<meta property="article:published_time" content="2021-09-06T10:29:57+08:00" />
+<meta property="article:modified_time" content="2021-09-06T10:29:57+08:00" />
+<meta itemprop="name" content="Zabbix预处理系列-02：结构化数据 XML">
+<meta itemprop="description" content="本章节主要通过示例来讲解：XML XPath">
+<meta itemprop="datePublished" content="2021-09-06T10:29:57+08:00" />
+<meta itemprop="dateModified" content="2021-09-06T10:29:57+08:00" />
+<meta itemprop="wordCount" content="2264">
+
+
+
+<meta itemprop="keywords" content="zabbix," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Zabbix预处理系列-02：结构化数据 XML"/>
+<meta name="twitter:description" content="本章节主要通过示例来讲解：XML XPath"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">小米博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">小米博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Zabbix预处理系列-02：结构化数据 XML</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-06 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%9B%91%E6%8E%A7%E6%8A%80%E6%9C%AF/"> 监控技术 </a>
+            </div>
+          <span class="more-meta"> 约 2264 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#结构化数据-xml-xpath">结构化数据 XML XPath</a>
+          <ul>
+            <li><a href="#准备工作">准备工作</a></li>
+            <li><a href="#关于预处理">关于预处理</a></li>
+            <li><a href="#xml-xpath-预处理">XML Xpath 预处理</a></li>
+            <li><a href="#总结">总结</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>本章节主要通过示例来讲解：XML XPath</p>
+<h2 id="结构化数据-xml-xpath">结构化数据 XML XPath</h2>
+<p>大家都知道 Zabbix 支持了多种预处理的类型和方法，比如正则表达式、XML Xpath、JSONPath等。这篇主要讲解并演示 XML Xpath 。不需要借助任何第三方脚本或模板，通过使用编写Xpath查询来提取XML中所需的值。</p>
+<h3 id="准备工作">准备工作</h3>
+<p>我创建了一个名为Test-Server的主机，因为我们这次演示的是XML，所以这里我借用了w3c的XML的菜单页面，并创建一个HTTP请求的监控项。</p>
+<p>示例页面：</p>
+<p><a href="https://www.w3school.com.cn/example/xmle/simple.xml">https://www.w3school.com.cn/example/xmle/simple.xml</a></p>
+<p>创建一个HTTP类型的监控项，breakfast_menu将作为我们依赖项的主项，也就是master项。</p>
+<p><img src="/images/zabbix_004/zabbix_004.png" alt=""></p>
+<p>在配置监控项时，注意我们的监控项数据类型要配置成文本类型。</p>
+<p><img src="/images/zabbix_004/zabbix_004_1.png" alt=""></p>
+<p>这里我们通过浏览器可以直接访问这个网址，我使用HTTP代理项类型来接收该XML的内容作为历史数据，然后使用依赖项执行基于XPath的预处理。</p>
+<p><img src="/images/zabbix_004/zabbix_004_2.png" alt=""></p>
+<h3 id="关于预处理">关于预处理</h3>
+<p>这里让我稍微讲一些关于预处理是如何工作的背景知识。通过下面的图，我们来简答梳理一下预处理的工作过程。</p>
+<p><img src="/images/zabbix_004/zabbix_004_3.png" alt=""></p>
+<p>预处理简单解释：</p>
+<p>我们收到了一些数据（data）。这是原始数据，没有经过任何规则的处理，当数据经过预处理时，</p>
+<p>Zabbix预处理有两个进程负责处理这个任务：</p>
+<p>1、preprocessing manager（预处理管理器）</p>
+<p>2、preprocessing workers （预处理工作进程）</p>
+<p>首先通过预处理管理器将决定如何处理这些数据。它获取到数据后并将其发送给预处理工作进程。预处理工作进程执行我们在前端所配置的所有步骤(比如XPath)。然后将数据写回至预处理管理器的队列中，预处理管理器再将预处理后的数据写入历史缓存。</p>
+<p>所以，如果我们在这里接收到大量的数据，在预处理的输入输出中，通过丢弃掉我们不想要的东西，我们将得到我们想要的数据。</p>
+<h3 id="xml-xpath-预处理">XML Xpath 预处理</h3>
+<p>现在让我们看看在前端能看到什么。我们之前配置的breakfast_menu监控项应该已经开始工作了。监测 &gt; 最新数据 &gt; breakfast_menu &gt; 历史记录。</p>
+<p><img src="/images/zabbix_004/zabbix_004_4.png" alt=""></p>
+<p>我看一下上边的示例的XML文件，其中几种食物，包括食物的名字、价格、描述、卡路里。</p>
+<p>这里给大家稍微提醒一下关于历史数据的保存时间，我这里保留了默认的历史存储周期，只是为了能够在最新数据里看到数据的样子。在实际应用中，建议将主监控项的History存储周期更改为&rsquo; 0 &lsquo;。</p>
+<p>如果History存储周期设置为&rsquo; 0 &lsquo;，所有这些XML内容将不会保存到数据库中。那样当主项接收完整的XML行后，依据每个依赖项对接收到的值进行预处理，并提取我在预处理步骤中指定的数据。</p>
+<p>在此之后，所有这些完整的XML文档或文本将被丢弃。所以，我们不会浪费数据库的存储空间。而且还将提高Zabbix的性能，您使用条目来接收大量数据，然后使用预处理来提取有意义的数据，这就是Zabbix预处理的最佳实践。</p>
+<p>让我们继续Xpath。在Zabbix 3.4中引入了Xpath，它不仅支持从XML中选择一些属性，而且还支持所有函数，以便您可以根据XML数据执行不同的计算。例如，你可以统计菜单提供了多少种食物，或者那种食物卡路里最低。</p>
+<p>统计菜单提供了多少种食物：</p>
+<p><img src="/images/zabbix_004/zabbix_004_5.png" alt=""></p>
+<p>这里我们预处理选择&quot;XML XPath&rdquo;，实际上只要我们的XPath查询写正确，就可以输出结果。至于XPath其他语法，您可以通过搜索引擎查找XPath的相关信息，这里请注意zabbix支持XPath 1.0版本，而不是2.0版本，因此可能查询的语法略有不同。</p>
+<p>不要忘记，Zabbix预处理还有测试功能。假设我们不确定自己写的参数是否正确，可以通过点击Test按钮，在“值”框中，复制粘贴好我们的XML测试文本。单击应用，然后单击测试。您可以看到XPath参数的结果。</p>
+<p><img src="/images/zabbix_004/zabbix_004_6.png" alt=""></p>
+<p>这里还有一个小技巧教给大家，如果出于某种原因你无法使用Zabbix前端进行测试，还可以在命令行中测试。语法是:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">xmllint −−xpath <span class="s1">&#39;query&#39;</span> filename.xml
+</code></pre></td></tr></table>
+</div>
+</div><p>在引号中，我们需要指定要使用的XPath查询。也就是&rsquo; count(/breakfast_menu/food) &lsquo;。我们还需要指定文件名，因此我们把simple.xml下载下来。执行命令后可以得到输出，是5。</p>
+<p><img src="/images/zabbix_004/zabbix_004_7.png" alt=""></p>
+<p>接下来让我们尝试在XML文件中计算那道菜卡路里含量最高。菜谱中卡路里含量分别是650、900、600、950，语法是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">number<span class="o">(</span>/breakfast_menu/food/calories<span class="o">[</span>not<span class="o">(</span>.&lt;/breakfast_menu/food/calories<span class="o">)])</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>我们继续在zabbix前端配置XPath查询语句，参入写入上边的语法，并测试结果。</p>
+<p><img src="/images/zabbix_004/zabbix_004_8.png" alt=""></p>
+<p>接下来，我们结合上节的正则表达式来进行组合处理，比如我们取第一个food的价格 $5.95，因为我们获取$5.95的时候，这个价格的数据类型是字符串，所以我们就需要在加一个预处理的步骤，使其变成一个浮点数。</p>
+<p><img src="/images/zabbix_004/zabbix_004_9.png" alt=""></p>
+<p>点击 Test all steps 测试所有步骤：</p>
+<p><img src="/images/zabbix_004/zabbix_004_10.png" alt=""></p>
+<h3 id="总结">总结</h3>
+<p>总体来说在zabbix 3.4版本之前，如果想监控XML输出，所有步骤都必须在Zabbix之外使用脚本完成，然后将已经收集、分析、文本处理和转换的值提供给Zabbix。</p>
+<p>但是有了预处理功能，我们可以抛弃所有的定制解决方案。只需得到一个值，在没有任何第三方工具的情况下，使用Zabbix在前端分析它。只需指定XPath的查询，进行一些计算，不仅可以提取特定的值，而且通过XPath函数进行各种计算等等。在网上可以搜索到很多XPath的查询例子，这里就不在一一列举了。</p>
+<p>这里我们没有讨论自定义失败，这也是算是Zabbix里的一个比较新的功能。如果正则表达式、XML路径或项目本身失败，我们可以指定我们想要做什么——比如完全丢弃该值，或将其设置为预先配置的值，或仅仅设置一个自定义错误，如“this doesn ' t work”。</p>
+<p>接下来我将为大家介绍预处理的JSONPath，感谢大家的支持。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">小米飞猫</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-09-06
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/zabbix/">zabbix</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/zabbix/zabbix_003/">
+            <span class="next-text nav-default">解决Zabbix proxy大量DNS反向解析请求问题</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ukyomud@outlook.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/ukyomud" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/bdflycat" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/13776074" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://ukyomud.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>小米飞猫</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
